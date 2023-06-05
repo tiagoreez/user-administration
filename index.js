@@ -5,9 +5,14 @@ const config = require('./config/config')
 const PORT = config.PORT
 const morgan = require('morgan')
 const bodyParser = require('body-parser')
+const connectionDB = require('./server/database/connection')
 
 // log requests
 app.use(morgan('tiny'))
+
+// MongoDB Connection
+
+connectionDB()
 
 // parse request to body-parser
 app.use(bodyParser.urlencoded({ extended: true }))
