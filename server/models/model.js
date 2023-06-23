@@ -12,7 +12,8 @@ const schema = new mongoose.Schema({
     unique: true
   },
   gender: String,
-  status: String
+  status: String,
+  createdAt: mongoose.SchemaTypes.Date
 
 })
 
